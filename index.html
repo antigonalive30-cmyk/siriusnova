@@ -27,7 +27,8 @@
   .wrap{max-width:960px; margin:0 auto; padding:0 28px;}
 
   h1,h2,h3{font-family:'Fraunces',serif; font-weight:500; letter-spacing:-0.01em; text-wrap:balance;}
-  p{text-wrap:pretty;}
+  p{text-wrap:pretty; hyphens:auto;}
+  .lede, .section > p, .path-detail p, .econ-row .label .sub{text-align:justify; text-justify:inter-word;}
 
   /* HERO */
   .hero{padding:72px 0 56px; border-bottom:1px solid var(--line); position:relative; overflow:hidden;}
@@ -88,8 +89,8 @@
 
   /* STAKE growth */
   .stake-steps{display:flex; flex-direction:column; gap:22px; max-width:680px;}
-  .stake-step{display:flex; gap:16px; align-items:baseline;}
-  .stake-step .t{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--gold); min-width:96px;}
+  .stake-step{display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:start;}
+  .stake-step .t{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--gold); text-wrap:balance; padding-top:2px;}
   .stake-step .d h4{font-family:'IBM Plex Sans'; font-size:16px; font-weight:600; margin-bottom:4px;}
   .stake-step .d p{font-size:13.5px; color:var(--paper-dim); line-height:1.5;}
 
@@ -150,8 +151,7 @@
     .hero-brands{flex-direction:column; align-items:flex-start; gap:10px;}
     .econ-row{grid-template-columns:1fr; gap:8px;}
     .econ-row .value{font-size:19px;}
-    .stake-step{flex-direction:column; gap:4px;}
-    .stake-step .t{min-width:0;}
+    .stake-step{grid-template-columns:1fr; gap:4px;}
     table.cmp{font-size:12.5px;}
     table.cmp th, table.cmp td{padding:10px 8px;}
     .calc{padding:24px 20px;}
@@ -220,7 +220,7 @@
       </div>
       <div class="econ-row">
         <div class="label">Юр/ипотека/кадастр/геодезия для клиента<span class="brand-tag sirius">Сириус</span><span class="sub">По внутреннему прайсу для агентов: юрпроверка от 8 000 ₽, ипотека от 0,5% суммы кредита, поэтажный план от 2 000 ₽ — дешевле рынка, клиент не уходит на сторону. Прайс пересматривается ежеквартально по реальной нагрузке</span></div>
-        <div class="value teal">по прайсу</div>
+        <div class="value">по прайсу</div>
       </div>
       <div class="econ-row">
         <div class="label">Доля от сметы ремонта, если клиент идёт в Nova Etapa<span class="brand-tag nova">Nova Etapa</span><span class="sub">15–20% от Nova Etapa (растёт с объёмом, раздел 04). Из этого бонуса 5% уходит в ООО «Сириус Прайм» — остальное ваше</span></div>
